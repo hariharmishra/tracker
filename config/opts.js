@@ -5,17 +5,13 @@ module.exports = require('optimist')
     .describe('context.url', 'Base context URL')
     .default('context.url', '')
     .describe('host', 'Host IP')
-    .default('host', 'localhost')
-
-    .describe('port', 'Port number for the Express application.')
-    .default('port', '3005')
-
+    .default('host', '0.0.0.0')
     .default('db.host', 'localhost')
     .default('db.port', '27017')
     .default('db.connection', 'Tracking')
     .usage('Usage: $0 --port [port]')
     .alias('port', 'p')
     .describe('port', 'Port number for the Express application.')
-    .default('port', 5000)
+    .default('port', 80)
     .argv;
 
